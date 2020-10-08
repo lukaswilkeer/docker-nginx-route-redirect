@@ -11,7 +11,7 @@
     "api",
     "demonstration"
   ],
-  "author": "",
+  "author": "@lukaswilkeer",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
