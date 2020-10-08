@@ -1,0 +1,28 @@
+version: "2.0"
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/nginx
+      - logvolume01:/var/log      
+    environment:
+      - HOST=localhost
+      - HOST_HTTPS=localhost:8000
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+        - "3000:3000"
+    volumes:
+      - .:/server
+      - logvolume02:/var/log
+volumes:
+  logvolume01: {}
+  logvolume02: {}
