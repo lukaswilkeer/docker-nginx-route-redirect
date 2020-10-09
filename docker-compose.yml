@@ -8,20 +8,20 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - .:/nginx
+      - .:/web
       - logvolume01:/var/log      
     environment:
       - HOST=localhost
       - HOST_HTTPS=localhost:8000
 
-  server:
+  api:
     build:
-      context: ./server
+      context: ./api
       dockerfile: Dockerfile
     ports:
         - "3000:3000"
     volumes:
-      - .:/server
+      - .:/api
       - logvolume02:/var/log
 
 volumes:
