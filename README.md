@@ -11,3 +11,4 @@ TL;DR: In references you can encounter how to use env files on a Dockerfile to b
 * https://www.hostinger.com.br/tutoriais/nginx-redirect-http-to-https/
 * https://serverfault.com/questions/577370/how-can-i-use-environment-variables-in-nginx-conf
 * https://docs.docker.com/compose/environment-variables/
+* http://nginx.org/en/docs/http/configuring_https_servers.html
