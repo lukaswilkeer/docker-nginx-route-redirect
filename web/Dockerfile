@@ -1,10 +1,14 @@
-FROM node:latest as build
+FROM node:alpine as build
 
 WORKDIR ./web
 
-RUN npm install -g serve
+COPY public public
+COPY src src
+COPY yarn.lock yarn.lock
+COPY package.json package.json
+
 RUN npm install
-RUN npm build
+RUN npm run build
 
 
 FROM nginx:alpine
