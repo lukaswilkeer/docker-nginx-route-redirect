@@ -19,6 +19,9 @@ COPY nginx.template.conf .
 COPY docker-entrypoint.sh /
 COPY --from=build /web /usr/share/nginx/html
 
+# for React Router use,
+# RUN rm /etc/nginx/conf.d/default.conf
+
 EXPOSE "8000":"80"
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
