@@ -10,10 +10,7 @@ services:
     volumes:
       - .:/web
       - logvolume01:/var/log      
-    environment:
-      - HOST=localhost
-      - HOST_HTTPS=localhost:8000
-
+      
   api:
     build:
       context: ./api
