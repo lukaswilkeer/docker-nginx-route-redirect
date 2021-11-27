@@ -2,6 +2,8 @@
 
 This is a demonstration of how to force the use of https using nginx and docker.
 
+To get up and running you i'll need to setup you signed ssl cert files. Infos can be located at [web/nginx.template.conf](web/nginx.template.conf)
+
 TL;DR: In references you can encounter how to use env files on a Dockerfile to better manangement of the environment.
 
 ## References:
